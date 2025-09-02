@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Favorito</title>
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interagindo</h1>
+    <p>Escolha uma opção:</p>
+    <button onclick="perguntarNome()">Perguntar nome</button>
+    <button onclick="perguntarAnimal()">Perguntar animal favorito</button>
+
+    <script>
+        function perguntarNome() {
+            let nome = window.prompt("Qual é o seu nome?");
+            window.alert(`Olá, ${nome}!`);
+        }
+
+        function perguntarAnimal() {
+            let animal = window.prompt("Qual seu animal favorito?");
+            window.alert(`Seu animal favorito é: ${animal}`);
+        }
+    </script>
+</body>
+</html>
