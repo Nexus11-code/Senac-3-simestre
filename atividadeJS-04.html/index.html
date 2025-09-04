@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Troco</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f4f8; /* Cor de fundo mais clara */
+    }
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1976d2; /* Azul */
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1565c0; /* Azul mais escuro */
+    }
+    h1 {
+      color: #1976d2; /* Azul */
+    }
+  </style>
+</head>
+<body>
+  <h1>Loja Virtual</h1>
+
+  <button onclick="calcularTroco()">Comprar Produto</button>
+
+  <script>
+    function calcularTroco() {
+      const nome = prompt("Nome do produto:");
+      const preco = Number(prompt("Preço do produto:").replace(",", "."));
+      const dinheiro = Number(prompt("Dinheiro entregue:").replace(",", "."));
+      if (!nome || isNaN(preco) || isNaN(dinheiro)) {
+        alert("Valores inválidos!");
+        return;
+      }
+      const troco = dinheiro - preco;
+      if (troco >= 0) {
+        alert(`Produto: ${nome}\nTroco: R$${troco.toFixed(2)}`);
+      } else {
+        alert(`Produto: ${nome}\nFaltam R$${Math.abs(troco).toFixed(2)}`);
+      }
+    }
+  </script>
+</body>
+</html>

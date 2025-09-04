@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Interface com Botões</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      margin-left: 40px;
+    }
+    .container-botoes {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 200px;
+      text-align: left;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:left;">Três Botões</h1>
+
+  <div class="container-botoes">
+    <button onclick="alert('Você clicou no 1º botão!')">Botão 1</button>
+    <button onclick="alert('Você clicou no 2º botão!')">Botão 2</button>
+    <button onclick="alert('Você clicou no 3º botão!')">Botão 3</button>
+  </div>
+
+</body>
+</html>
